@@ -1,0 +1,5 @@
+# การตั้งค่า Netlify — Static Site
+
+[build]
+  # ไม่ใช้คำสั่ง build สำหรับ static site
+  publish = "."
