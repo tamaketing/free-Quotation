@@ -1,5 +1,24 @@
-# การตั้งค่า Netlify — Static Site
+# การตั้งค่า Netlify สำหรับ Web App (Static Site)
 
 [build]
-  # ไม่ใช้คำสั่ง build สำหรับ static site
-  publish = "."
+  # Static site – ไม่ใช้คำสั่ง build
+  # publish = โฟลเดอร์ที่มีไฟล์เว็บ (เช่น public, dist)
+  publish = "public"
+
+  # โวลุ่ม environment variables (ถ้ามี)
+  # [build.environment]
+  #   NODE_VERSION = "18"
+
+# Redirect สำหรับ Single Page Application (SPA)
+# เลิกคอมเมนต์ถ้าใช้ React, Vue, Angular
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
+
+# Headers ความปลอดภัย (ไม่บังคับ)
+# [[headers]]
+#   for = "/*"
+#   [headers.values]
+#     X-Frame-Options = "DENY"
+#     X-Content-Type-Options = "nosniff"
