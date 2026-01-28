@@ -2,8 +2,7 @@
 
 [build]
   # Static site – ไม่ใช้คำสั่ง build
-  # publish = โฟลเดอร์ที่มีไฟล์เว็บ (เช่น public, dist)
-  publish = "public"
+  publish = "."
 
   # โวลุ่ม environment variables (ถ้ามี)
   # [build.environment]
